@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   bill: any = '';
   numberOfPeople: any = '';
-  selectedTip: number = 0;
+  selectedTip: any = '';
   tipAmount: number = 0;
   total: number = 0;
   activeButton: number = 0;

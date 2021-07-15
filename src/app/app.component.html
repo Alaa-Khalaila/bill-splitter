@@ -33,7 +33,14 @@
             >
               {{ tip.value }}%
             </button>
-            <button class="btn">Custom</button>
+            <input
+              class="tipInput"
+              type="number"
+              name="selectedTip"
+              [(ngModel)]="selectedTip"
+              placeholder="Custom"
+              id="people"
+            />
           </div>
         </div>
         <div class="form-group">

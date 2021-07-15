@@ -27,6 +27,12 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+@media screen and (max-width: 500px) {
+  body {
+    width: 100%;
+  }
+}
+
 .header {
   padding: 120px 0 60px 0;
   display: flex;
@@ -34,6 +40,15 @@ body {
   .logo {
     height: 100px;
     width: 80px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    padding: 50px 0 20px 0;
+  }
+  .header .logo {
+    width: 120px;
   }
 }
 
@@ -88,6 +103,9 @@ body {
   .grid.grid--1x2 {
     grid-template-columns: repeat(1, 1fr);
   }
+  .grid.grid--1x3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /* Forms */
@@ -104,6 +122,22 @@ form {
   }
   .form-group {
     margin-top: 3rem;
+    .tipInput {
+      background-color: lighten($color: $secondary-color, $amount: 10%);
+      border-radius: 0.6rem;
+      margin: 0.8rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      direction: rtl;
+      color: lighten($color: $body-text-color, $amount: 8%);
+      width: 90%;
+      font-size: 2rem;
+
+      &::placeholder {
+        text-align: center;
+        font-size: 2.5rem;
+      }
+    }
   }
 }
 
@@ -174,8 +208,4 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
-
-.active {
-  background-color: darkgoldenrod;
 }
