@@ -22,7 +22,7 @@ html {
 
 body {
   background-color: $secondary-color;
-  width: 60%;
+  width: 55%;
   margin: 0 auto;
   font-family: "Poppins", sans-serif;
 }
@@ -125,10 +125,14 @@ form {
   }
 
   &.btn--accent {
-    background-color: darken($color: $accent-color, $amount: 10%);
+    background-color: darken($color: $accent-color, $amount: 15%);
+    color: #fff;
   }
   &:hover {
     cursor: pointer;
+  }
+  &:disabled {
+    opacity: 0.6;
   }
 }
 
@@ -136,7 +140,7 @@ form {
 
 .input-group {
   background-color: lighten($color: $secondary-color, $amount: 10%);
-  padding: 0.6rem;
+  padding: 1rem;
   width: 100%;
   border-radius: 0.3rem;
   display: flex;
@@ -156,7 +160,7 @@ form {
 /* Icons */
 
 .icon {
-  height: 1.5rem;
+  height: 2rem;
   width: 1.5rem;
 }
 
@@ -170,4 +174,8 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
+}
+
+.active {
+  background-color: darkgoldenrod;
 }
