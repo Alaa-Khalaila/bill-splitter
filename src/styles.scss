@@ -1,1 +1,173 @@
 /* You can add global styles to this file, and also import other style files */
+$primary-color: #00474b;
+$secondary-color: #c5e4e7;
+$accent-color: #2fbeac;
+
+$input-color: #f3f8fb;
+
+$body-text-color: #6e7c7f;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  // Making 1 rem = 10 px
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $secondary-color;
+  width: 60%;
+  margin: 0 auto;
+  font-family: "Poppins", sans-serif;
+}
+
+.header {
+  padding: 120px 0 60px 0;
+  display: flex;
+  justify-content: center;
+  .logo {
+    height: 100px;
+    width: 80px;
+  }
+}
+
+/* Card */
+
+.card {
+  background-color: #fff;
+  border-radius: 2.3rem;
+  padding: 4rem;
+  font-size: 1.8rem;
+  .card-inputs {
+    padding-right: 2rem;
+  }
+
+  .card-outputs {
+    color: #fff;
+    background-color: $primary-color;
+    border-radius: 1rem;
+    padding: 4.5rem 4rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    font-size: 1.5rem;
+    .price {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 2rem;
+      span {
+        opacity: 0.4;
+      }
+      .value {
+        font-size: 3.5rem;
+        color: darken($color: $accent-color, $amount: 10%);
+      }
+    }
+  }
+}
+
+/* Grid */
+
+.grid {
+  display: grid;
+  &.grid--1x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  &.grid--1x3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .grid.grid--1x2 {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* Forms */
+
+form {
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  input {
+    border: 0;
+    outline: 0;
+    padding: 0.5rem 1rem;
+  }
+  .form-group {
+    margin-top: 3rem;
+  }
+}
+
+/* Buttons */
+
+.btn {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  border: 0;
+  margin: 0.8rem;
+  border-radius: 0.6rem;
+  font-size: 2.5rem;
+  &.btn--primary {
+    color: #fff;
+    background-color: $primary-color;
+  }
+  &.btn--secondary {
+    background-color: lighten($color: $secondary-color, $amount: 10%);
+  }
+
+  &.btn--accent {
+    background-color: darken($color: $accent-color, $amount: 10%);
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+/* Input Group */
+
+.input-group {
+  background-color: lighten($color: $secondary-color, $amount: 10%);
+  padding: 0.6rem;
+  width: 100%;
+  border-radius: 0.3rem;
+  display: flex;
+  justify-content: space-between;
+  input {
+    direction: rtl;
+    background-color: lighten($color: $secondary-color, $amount: 10%);
+    color: lighten($color: $body-text-color, $amount: 8%);
+    flex-grow: 1;
+    font-size: 2rem;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}
+
+/* Icons */
+
+.icon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.icon-dollar {
+  margin: auto 0;
+}
+
+/* Inputs */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

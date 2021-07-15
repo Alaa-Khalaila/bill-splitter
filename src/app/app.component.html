@@ -1,3 +1,62 @@
-<svg class="icon">
-  <use xlink:href="../assets/images/sprite.svg#logo"></use>
-</svg>
+<header class="header">
+  <svg class="logo">
+    <use xlink:href="../assets/images/sprite.svg#logo"></use>
+  </svg>
+</header>
+
+<main>
+  <div class="card grid grid--1x2">
+    <div class="card-inputs">
+      <form>
+        <div class="form-group">
+          <label for="bill">Bill</label>
+          <div class="input-group">
+            <svg class="icon icon-dollar">
+              <use xlink:href="../assets/images/sprite.svg#icon-dollar"></use>
+            </svg>
+            <input type="number" placeholder="0" id="bill" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="tip">Select Tip %</label>
+          <div class="grid grid--1x3">
+            <button class="btn btn--primary">5%</button>
+            <button class="btn btn--primary">10%</button>
+            <button class="btn btn--primary">15%</button>
+            <button class="btn btn--primary">25%</button>
+            <button class="btn btn--primary">50%</button>
+            <button class="btn">Custom</button>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="people">Number of People</label>
+          <div class="input-group">
+            <svg class="icon icon-dollar">
+              <use xlink:href="../assets/images/sprite.svg#icon-person"></use>
+            </svg>
+            <input type="number" placeholder="0" id="people" />
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="card-outputs">
+      <div>
+        <div class="price">
+          <div>
+            <h3>Tip Amount</h3>
+            <span>/ person</span>
+          </div>
+          <div class="value">$0.00</div>
+        </div>
+        <div class="price">
+          <div>
+            <h3>Total</h3>
+            <span>/ person</span>
+          </div>
+          <div class="value">$0.00</div>
+        </div>
+      </div>
+      <button class="btn btn--accent" disabled>RESET</button>
+    </div>
+  </div>
+</main>
